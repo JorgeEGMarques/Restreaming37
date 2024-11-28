@@ -1,31 +1,14 @@
-import { Component, OnInit, SecurityContext} from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
-import { Video, VideosService } from '../videos/videos.service';
+import { HeaderComponent } from './header/header.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, HeaderComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'Restreaming37';
-  videos!: Video[];
-
-  constructor(
-    private videosService: VideosService,
-    private sanitizer: DomSanitizer
-  ) {}
-
-  ngOnInit(): void {
-    this.videosService.getVideos().subscribe((data) => {
-      this.videos = data;
-    });
-  }
-
-  prepare(video: Video): SafeResourceUrl {
-    return this.sanitizer.bypassSecurityTrustResourceUrl(video.url);
-  }
 }

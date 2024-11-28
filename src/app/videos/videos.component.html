@@ -1,0 +1,9 @@
+<div id="video-frame">
+  @for (video of videos; track video.id) {
+    <a [routerLink]="['/watch', video.id]" class="video">
+      <img src="{{ video.thumbnail }}" alt="">
+      <h4>{{ video.title }}</h4>
+      <p>{{ video.description }}</p>
+    </a>
+  }  
+</div>

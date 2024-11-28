@@ -1,0 +1,12 @@
+<div class="display">
+    <div class="video-frame">
+        <iframe id="video" [src]="prepare()"></iframe>
+    </div>
+    <div class="video-data">
+        <h2>{{ video.title }}</h2>
+        <p>Descrição: {{ video.description }}</p>
+        <p>Lançamento: {{ video.uploadedAt }}</p>
+        <p>Visualizações: {{ video.views }}</p>
+    </div>
+</div>
+

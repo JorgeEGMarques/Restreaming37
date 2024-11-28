@@ -1,7 +1,2 @@
-@for (video of videos; track video.id) {
-  <p>{{ video.title }}</p>
-  <img src="{{ video.thumbnail }}" alt="">
-  <iframe [src]="prepare(video)"></iframe>
-}
-
+<app-header></app-header>
 <router-outlet></router-outlet>

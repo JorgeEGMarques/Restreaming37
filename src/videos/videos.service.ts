@@ -4,12 +4,12 @@ import { Observable } from 'rxjs';
 
 export interface Video {
     id: number,
-    title: String,
-    description: String,
-    url: String,
-    thumbnail: String,
+    title: string,
+    description: string,
+    url: string,
+    thumbnail: string,
     views: number,
-    uploadedAt: String
+    uploadedAt: string
 }
 
 @Injectable({

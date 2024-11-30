@@ -1,9 +1,15 @@
+<div class="search-bar">
+  <app-search (searchParam)="searchFilter($event)"></app-search>
+</div>
 <div id="video-frame">
-  @for (video of videos; track video.id) {
+  @for (video of filteredVideos; track video.id) {
     <a [routerLink]="['/watch', video.id]" class="video">
       <img src="{{ video.thumbnail }}" alt="">
-      <h4>{{ video.title }}</h4>
-      <p>{{ video.description }}</p>
+      <div class="video-text">
+        <h4>{{ video.title }}</h4>
+        <p>{{ video.description }}</p>
+      </div>
+
     </a>
   }  
 </div>

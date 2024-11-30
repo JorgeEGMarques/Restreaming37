@@ -7,3 +7,41 @@ header {
     justify-content: center;
     width: 100%;
 }
+
+.auth {
+    position: absolute;
+    right: 20px;
+}
+
+.auth .btn {
+    background-color: white;
+    border: none;
+    border-radius: 7px;
+    color: black;
+    font-weight: 700px;
+    height: 25px;
+    width: 60px;
+}
+
+.auth .btn:hover {
+    cursor: pointer;
+}
+
+.auth .btn:active {
+    background-color: black;
+    color: white;
+    outline: white solid 2px;
+}
+
+@media (max-width: 400px) {
+    header {
+        flex-direction: column;
+        height: 7em;
+    }
+
+    .auth {
+        padding-top: 5px;
+        left: 0px;
+        position: relative;
+    }
+}

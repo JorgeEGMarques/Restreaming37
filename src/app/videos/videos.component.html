@@ -4,7 +4,7 @@
 <div id="video-frame">
   @for (video of filteredVideos; track video.id) {
     <a [routerLink]="['/watch', video.id]" class="video">
-      <img src="{{ video.thumbnail }}" alt="">
+      <img src="{{ video.thumbnail }}" alt="{{ video.description }}">
       <div class="video-text">
         <h4>{{ video.title }}</h4>
         <p>{{ video.description }}</p>
